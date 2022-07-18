@@ -7,6 +7,7 @@ const refs = {
   result: document.querySelector("#result"),
   paste: document.querySelector("#paste"),
   copy: document.querySelector("#copy"),
+  claer: document.querySelector("#clear"),
 };
 
 refs.source.addEventListener("input", () => {
@@ -19,6 +20,11 @@ refs.copy.addEventListener("click", () => {
 
 refs.paste.addEventListener("click", () => {
   navigator.clipboard.readText().then((text) => (refs.source.value = text));
+});
+
+refs.claer.addEventListener("click", () => {
+  refs.source.value = "";
+  refs.result.value = "";
 });
 
 refs.source.focus();

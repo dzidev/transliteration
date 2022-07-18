@@ -8,7 +8,7 @@ body {
   /* box-shadow: 10px 5px 10px 5px rgba(20, 1, 1, 0.89); */
   color: rgb(249, 224, 248);
   cursor: pointer;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 2.81;
   margin-bottom: 10px;
@@ -16,6 +16,11 @@ body {
   text-transform: uppercase;
   border: 1px solid;
   border-radius: 5px;
+}
+
+.btn-clear {
+  color: rgb(238, 243, 181);
+  /* color: rgb(190, 239, 222); */
 }
 
 .btn:hover {
@@ -28,4 +33,7 @@ body {
 
 .d-flex {
   align-items: center;
+}
+.text-area-name {
+  font-weight: 700;
 }
