@@ -13,9 +13,11 @@ body {
   line-height: 2.81;
   margin-bottom: 10px;
   min-width: 160px;
+  max-height: 3em;
   text-transform: uppercase;
   border: 1px solid;
   border-radius: 5px;
+  padding: 0.1em;
 }
 
 .btn-clear {
