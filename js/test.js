@@ -1,0 +1,86 @@
+import translateText from "./translation.js";
+
+const testData = [
+  { ukr: "Вінниця", lat: "Vinnytsia" },
+  { ukr: "Володимир", lat: "Volodymyr" },
+  { ukr: "Гадяч", lat: "Hadiach" },
+  { ukr: "Богдан", lat: "Bohdan" },
+  { ukr: "Згурський", lat: "Zghurskyi" },
+  { ukr: "Ґалаґан", lat: "Galagan" },
+  { ukr: "Ґорґани", lat: "Gorgany" },
+  { ukr: "Донецьк", lat: "Donetsk" },
+  { ukr: "Дмитро", lat: "Dmytro" },
+  { ukr: "Рівне", lat: "Rivne" },
+  { ukr: "Олег", lat: "Oleh" },
+  { ukr: "Есмань", lat: "Esman" },
+  { ukr: "Єнакієве", lat: "Yenakiieve" },
+  { ukr: "Гаєвич", lat: "Haievych" },
+  { ukr: "Короп’є", lat: "Koropie" },
+  { ukr: "Житомир", lat: "Zhytomyr" },
+  { ukr: "Жанна", lat: "Zhanna" },
+  { ukr: "Жежелів", lat: "Zhezheliv" },
+  { ukr: "Закарпаття", lat: "Zakarpattia" },
+  { ukr: "Казимирчук", lat: "Kazymyrchuk" },
+  { ukr: "Медвин", lat: "Medvyn" },
+  { ukr: "Михайленко", lat: "Mykhailenko" },
+  { ukr: "Іванків", lat: "Ivankiv" },
+  { ukr: "Іващенко", lat: "Ivashchenko" },
+  { ukr: "Їжакевич", lat: "Yizhakevych" },
+  { ukr: "Кадиївка", lat: "Kadyivka" },
+  { ukr: "Мар’їне", lat: "Marine" },
+  { ukr: "Йосипівка", lat: "Yosypivka" },
+  { ukr: "Стрий", lat: "Stryi" },
+  { ukr: "Олексій", lat: "Oleksii" },
+  { ukr: "Київ", lat: "Kyiv" },
+  { ukr: "Коваленко", lat: "Kovalenko" },
+  { ukr: "Лебедин", lat: "Lebedyn" },
+  { ukr: "Леонід", lat: "Leonid" },
+  { ukr: "Миколаїв", lat: "Mykolaiv" },
+  { ukr: "Маринич", lat: "Marynych" },
+  { ukr: "Ніжин", lat: "Nizhyn" },
+  { ukr: "Наталія", lat: "Nataliia" },
+  { ukr: "Одеса", lat: "Odesa" },
+  { ukr: "Онищенко", lat: "Onyshchenko" },
+  { ukr: "Полтава", lat: "Poltava" },
+  { ukr: "Петро", lat: "Petro" },
+  { ukr: "Решетилівка", lat: "Reshetylivka" },
+  { ukr: "Рибчинський", lat: "Rybchynskyi" },
+  { ukr: "Суми", lat: "Sumy" },
+  { ukr: "Соломія", lat: "Solomiia" },
+  { ukr: "Тернопіль", lat: "Ternopil" },
+  { ukr: "Троць", lat: "Trots" },
+  { ukr: "Ужгород", lat: "Uzhhorod" },
+  { ukr: "Уляна", lat: "Uliana" },
+  { ukr: "Фастів", lat: "Fastiv" },
+  { ukr: "Філіпчук", lat: "Filipchuk" },
+  { ukr: "Харків", lat: "Kharkiv" },
+  { ukr: "Христина", lat: "Khrystyna" },
+  { ukr: "Біла Церква", lat: "Bila Tserkva" },
+  { ukr: "Стеценко", lat: "Stetsenko" },
+  { ukr: "Чернівці", lat: "Chernivtsi" },
+  { ukr: "Шевченко", lat: "Shevchenko" },
+  { ukr: "Шостка", lat: "Shostka" },
+  { ukr: "Кишеньки", lat: "Kyshenky" },
+  { ukr: "Щербухи", lat: "Shcherbukhy" },
+  { ukr: "Гоща", lat: "Hoshcha" },
+  { ukr: "Гаращенко", lat: "Harashchenko" },
+  { ukr: "Юрій", lat: "Yurii" },
+  { ukr: "Корюківка", lat: "Koriukivka" },
+  { ukr: "Яготин", lat: "Yahotyn" },
+  { ukr: "Ярошенко", lat: "Yaroshenko" },
+  { ukr: "Костянтин", lat: "Kostiantyn" },
+  { ukr: "Знам’янка", lat: "Znamianka" },
+  { ukr: "Феодосія", lat: "Feodosiia" },
+];
+
+export const doTest = () => {
+  testData.forEach((test) => {
+    const res = translateText(test.ukr);
+    if (res != test.lat) {
+      throw new Error(
+        `Error at word '${test.ukr}': expected: '${test.lat}', got: '${res}'`
+      );
+    }
+  });
+  console.log("All tests passed");
+};
